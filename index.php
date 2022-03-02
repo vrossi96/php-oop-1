@@ -5,7 +5,7 @@ metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
 //|    => all'interno della classe sono dichiarate delle variabili d'istanza
 //|    => all'interno della classe è definito un costruttore
 //|    => all'interno della classe è definito almeno un metodo
-// - vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori delle relative proprietà
+//| - vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori delle relative proprietà
 
 class Movies
 {
@@ -49,12 +49,37 @@ var_dump($movie2);
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css' integrity='sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==' crossorigin='anonymous' />
+   <link rel="stylesheet" href="./css/style.css">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>PHP-OOP-1</title>
 </head>
 
 <body>
-
+   <div class="container">
+      <div class="row justify-content-center">
+         <div class="col-3">
+            <div class="movie d-flex flex-column justify-content-between" style="background-image: url(<?= $movie1->poster ?>);">
+               <h2 class="text-uppercase text-center"><?= $movie1->title ?></h2>
+               <div>
+                  <p>Anno di uscita: <?= $movie1->year ?></p>
+                  <p>Protagonista-Attore: <?= "$movie1->protagonist - $movie1->actor" ?></p>
+                  <p>Valutazione: <?= $movie1->stars ?></p>
+               </div>
+            </div>
+         </div>
+         <div class="col-3">
+            <div class="movie d-flex flex-column justify-content-between" style="background-image: url(<?= $movie2->poster ?>);">
+               <h2 class="text-uppercase text-center"><?= $movie2->title ?></h2>
+               <div>
+                  <p>Anno di uscita: <?= $movie2->year ?></p>
+                  <p>Protagonista-Attore: <?= "$movie2->protagonist - $movie2->actor" ?></p>
+                  <p>Valutazione: <?= $movie2->stars ?></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
 </body>
 
 </html>

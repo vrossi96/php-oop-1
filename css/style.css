@@ -1,0 +1,20 @@
+.movie{
+   padding: 15px;
+   color: #fff;
+   height: 480px;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-image: url();
+}
+
+.movie p{
+   font-weight: 600;
+   font-size: 18px;
+}
+
+.movie > div {
+   padding: 15px;
+   background-color: rgba(100, 100, 100, 0.432);
+   border-radius: 15px;
+}
